@@ -1,0 +1,2 @@
+export const GOT_FIREBASE_ARRAY:string = "GOT_FIREBASE_ARRAY";
+export const PULL_ARRAY_FROM_FIREBASE:string = "PULL_ARRAY_FROM_FIREBASE";
