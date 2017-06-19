@@ -5,8 +5,13 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
-
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { AppRoutingModule } from './app-routing.module';
+import { MainReducer } from './state-managements/reducers/main.reducer';
+import { MainEffects } from './state-managements/effects/main.effects';
 import { AppComponent } from './app.component';
+import { ScheduleModule } from './schedule/schedule.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +21,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ScheduleModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'schedule'),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    StoreModule.provideStore({ MainReducer }),
+     EffectsModule.run(MainEffects)
   ],
   providers: [],
   bootstrap: [AppComponent]
