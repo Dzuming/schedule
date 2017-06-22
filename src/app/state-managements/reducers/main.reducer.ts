@@ -1,6 +1,6 @@
 import { ActionReducer, Action } from '@ngrx/store';
 import { GOT_FIREBASE_ARRAY } from "../actions/main.action";
-import { State, intitialState } from "../states/main-state";
+import { State, intitialState } from "../states/main.state";
 export const MainReducer: ActionReducer<State> =
   function (state = intitialState, action: Action) {
 
@@ -11,7 +11,7 @@ export const MainReducer: ActionReducer<State> =
            return;
          }
         return Object.assign({}, state, {
-          payloadArray: action.payload.pulledArray.map(value => value)
+          payloadArray: action.payload.pulledArray
         });
 
       }
