@@ -1,3 +1,13 @@
-<p>
-  schedule-table works!
-</p>
+<ul>
+    <li class="text" *ngFor="let schedule of schedule">
+        {{schedule.$key}}
+        <ul>
+            <li>
+                {{schedule.Programowanie}}
+            </li>
+            <li>
+                {{schedule.Czytanie}}
+            </li>
+        </ul>
+    </li>
+</ul>

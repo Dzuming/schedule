@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ScheduleComponent } from './schedule.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ScheduleRoutingModule } from './schedule-routing.module';
+import { ScheduleTableComponent } from './schedule-table/schedule-table.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ScheduleRoutingModule } from './schedule-routing.module';
     ScheduleRoutingModule
   ],
   declarations: [
-    ScheduleComponent
+    ScheduleComponent,
+    ScheduleTableComponent
   ],
   exports: [
     ScheduleComponent
