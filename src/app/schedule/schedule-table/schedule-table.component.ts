@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { FirebaseListObservable } from "angularfire2/database";
 
 @Component({
   selector: 'app-schedule-table',

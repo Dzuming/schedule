@@ -1,7 +1,7 @@
 import { ActionReducer, Action } from '@ngrx/store';
-import { GOT_FIREBASE_ARRAY } from "../actions/main.action";
-import { State, intitialState } from "../states/main.state";
-export const MainReducer: ActionReducer<State> =
+import { GOT_FIREBASE_ARRAY } from "../actions/schedule.action";
+import { State, intitialState } from "../states/schedule.state";
+export const ScheduleReducer: ActionReducer<State> =
   function (state = intitialState, action: Action) {
 
     switch (action.type) {
@@ -13,7 +13,6 @@ export const MainReducer: ActionReducer<State> =
         return Object.assign({}, state, {
           payloadArray: action.payload.pulledArray
         });
-
       }
       default: {
         return state;

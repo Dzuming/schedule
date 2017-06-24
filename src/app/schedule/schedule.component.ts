@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Store } from '@ngrx/store';
-import { PULL_ARRAY_FROM_FIREBASE } from '../state-managements/actions/main.action';
-import { State } from "app/state-managements/states/main.state";
+import { PULL_ARRAY_FROM_FIREBASE } from '../state-managements/actions/schedule.action';
+import { State } from "app/state-managements/states/schedule.state";
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
@@ -11,8 +10,7 @@ import { State } from "app/state-managements/states/main.state";
 export class ScheduleComponent implements OnInit {
   schedule: any[];
   constructor(
-    private store: Store<State>,
-    private db: AngularFireDatabase
+    private store: Store<State>
   ) { }
 
   ngOnInit() {

@@ -8,8 +8,8 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AppRoutingModule } from './app-routing.module';
-import { MainReducer } from './state-managements/reducers/main.reducer';
-import { MainEffects } from './state-managements/effects/main.effects';
+import { ScheduleReducer } from './state-managements/reducers/schedule.reducer';
+import { ScheduleEffects } from './state-managements/effects/schedule.effects';
 import { AppComponent } from './app.component';
 import { ScheduleModule } from './schedule/schedule.module';
 
@@ -25,8 +25,8 @@ import { ScheduleModule } from './schedule/schedule.module';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'schedule'),
     AngularFireDatabaseModule,
-    StoreModule.provideStore({ MainReducer }),
-     EffectsModule.run(MainEffects)
+    StoreModule.provideStore({ ScheduleReducer }),
+     EffectsModule.run(ScheduleEffects)
   ],
   providers: [],
   bootstrap: [AppComponent]
