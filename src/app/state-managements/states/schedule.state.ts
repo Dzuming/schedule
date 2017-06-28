@@ -1,7 +1,7 @@
 export interface State {
-  payloadArray: any;
+  schedule: any[];
 };
 
 export const intitialState: State = {
-  payloadArray: []
+  schedule: []
 };

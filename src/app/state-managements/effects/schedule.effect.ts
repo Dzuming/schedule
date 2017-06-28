@@ -10,7 +10,7 @@ export class ScheduleEffects {
     .switchMap( () => {
         return this.db.list('/schedule')
         .switchMap(result =>
-          Observable.of({type: "GOT_FIREBASE_ARRAY", payload: {pulledArray:  result}})
+          Observable.of({type: "GOT_FIREBASE_ARRAY", payload: {schedule:  result}})
           )
     })
 

@@ -9,7 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AppRoutingModule } from './app-routing.module';
 import { ScheduleReducer } from './state-managements/reducers/schedule.reducer';
-import { ScheduleEffects } from './state-managements/effects/schedule.effects';
+import { ScheduleEffects } from './state-managements/effects/schedule.effect';
 import { AppComponent } from './app.component';
 import { ScheduleModule } from './schedule/schedule.module';
 

@@ -14,12 +14,14 @@ export class ScheduleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.getSchedule()
+
+  }
+  getSchedule() {
     this.store.dispatch({ type: PULL_ARRAY_FROM_FIREBASE });
-     this.store.select('MainReducer')
+    this.store.select('ScheduleReducer')
       .subscribe((data: State) => {
-        if (data.payloadArray.length > 0) {
-          this.schedule = data.payloadArray;
-        }
+          this.schedule = data.schedule;
       });
   }
 

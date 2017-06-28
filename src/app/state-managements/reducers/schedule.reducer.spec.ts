@@ -41,16 +41,16 @@ describe('Reducer', () => {
     expect(store).toBeTruthy();
 
     store.dispatch({ type: PULL_ARRAY_FROM_FIREBASE });
-    let data = store.select('MainReducer')
+    let data = store.select('ScheduleReducer')
       .subscribe((data: State) => {
 
-        expect(data.payloadArray).toEqual(10);
+        expect(data.schedule).toEqual(10);
       });
 
     // let data = store.select(GOT_FIREBASE_ARRAY)
     //   .subscribe((data:State)=> {
     //     console.log(data)
-    //     expect(data.payloadArray).toEqual(2);
+    //     expect(data.schedule).toEqual(2);
 
     //   });
 

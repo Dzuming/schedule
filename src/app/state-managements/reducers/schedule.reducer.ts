@@ -7,11 +7,8 @@ export const ScheduleReducer: ActionReducer<State> =
     switch (action.type) {
 
       case GOT_FIREBASE_ARRAY: {
-         if (action.payload.pulledArray === undefined) {
-           return;
-         }
         return Object.assign({}, state, {
-          payloadArray: action.payload.pulledArray
+          schedule: action.payload.schedule
         });
       }
       default: {
