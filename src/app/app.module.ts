@@ -12,7 +12,7 @@ import { ScheduleReducer } from './state-managements/reducers/schedule.reducer';
 import { ScheduleEffects } from './state-managements/effects/schedule.effect';
 import { AppComponent } from './app.component';
 import { ScheduleModule } from './schedule/schedule.module';
-
+import { RestService } from "app/shared/services/rest.service";
 @NgModule({
   declarations: [
     AppComponent
@@ -26,9 +26,9 @@ import { ScheduleModule } from './schedule/schedule.module';
     AngularFireModule.initializeApp(environment.firebase, 'schedule'),
     AngularFireDatabaseModule,
     StoreModule.provideStore({ ScheduleReducer }),
-     EffectsModule.run(ScheduleEffects)
+    EffectsModule.run(ScheduleEffects)
   ],
-  providers: [],
+  providers: [RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
