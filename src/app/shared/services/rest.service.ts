@@ -9,4 +9,8 @@ export class RestService {
   getShedule(): FirebaseListObservable<any[]> {
     return this.db.list('/schedule');
   }
+  saveShedule(object) {
+    const items = this.db.list('/schedule');
+     return items.push(object)
+  }
 }
